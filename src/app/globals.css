@@ -10,14 +10,14 @@
 
   --font-noto-sans: var(--font-noto-sans);
   --font-nanum-pen: var(--font-nanum-pen);
+}
 
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -34,7 +34,7 @@ body {
 
 /* Custom Utilities */
 @utility animate-scroll {
-  animation: scroll 35s linear infinite;
+  animation: scroll 12s linear infinite;
 }
 
 @utility filter-none {

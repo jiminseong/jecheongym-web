@@ -7,8 +7,8 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
-        <div className="max-w-[1200px] w-full flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 text-center md:text-left">
+        <div className="max-w-300 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex-1 text-center md:text-left max-w-125 md:max-w-none">
             <h1 className="text-[5rem] md:text-[6.5rem] font-black leading-[0.9] mb-8 tracking-tighter">
               SERIOUS
               <br />
@@ -16,28 +16,28 @@ export default function Home() {
               <br />
               ONLY.
             </h1>
-            <p className="text-xl md:text-lg text-[#ccc] mb-10 leading-relaxed max-w-[600px] mx-auto md:mx-0">
+            <p className="text-xl md:text-lg text-[#ccc] mb-10 leading-relaxed max-w-150 mx-auto md:mx-0">
               제천남여헬스장은 모두를 위한 헬스장이 아닙니다.
               <br />
               오직 진지하게 훈련하는 분들만을 위한 공간입니다.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex md:flex-row flex-col gap-4 justify-center md:justify-start w-full md:max-w-[800px]">
               <Link
                 href="https://open.kakao.com"
                 target="_blank"
-                className="inline-block bg-[#cc0000] text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#ff3333] hover:scale-105"
+                className="block bg-red-primary text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-red-hover hover:scale-105 text-center"
               >
                 입관 문의하기
               </Link>
               <Link
                 href="#machine-lineup"
-                className="inline-block bg-transparent border-[1px] border-white text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+                className="block bg-transparent border border-white text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black text-center"
               >
                 기구 리스트 보기
               </Link>
               <Link
                 href="#info"
-                className="inline-block bg-transparent border-[1px] border-white text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+                className="block bg-transparent border border-white text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black text-center"
               >
                 위치 확인하기
               </Link>
@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20 px-6 text-center max-w-[900px] mx-auto">
+      <section className="py-20 px-6 text-center max-w-225 mx-auto">
         <h2 className="text-3xl font-bold mb-8 uppercase tracking-wider">Identity</h2>
         <p className="text-lg text-[#ccc] leading-relaxed">
           우리는 화려한 인테리어나 편안한 휴게 공간을 제공하지 않습니다.

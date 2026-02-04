@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useMemo } from "react";
+import MachineListItem from "./MachineListItem";
 
 type MachineStatus = "arrived" | "scheduled";
 type MachinePart = "All" | "Chest" | "Back" | "Legs" | "Shoulder" | "Etc";
@@ -219,7 +220,7 @@ export default function MachineLineup() {
 
   return (
     <div
-      className="w-full max-w-[1200px] mx-auto mt-20 px-6 flex flex-col items-center md:px-0"
+      className="w-full max-w-300 mx-auto mt-20 px-6 flex flex-col items-center md:px-0"
       id="machine-lineup"
     >
       <h3 className="text-2xl text-white mb-8 text-center uppercase tracking-widest md:px-6 md:mb-6">
@@ -240,7 +241,7 @@ export default function MachineLineup() {
               return (
                 <button
                   key={brand}
-                  className={`h-14 px-6 flex items-center justify-center min-w-[140px] bg-transparent border rounded-full transition-all duration-300 whitespace-nowrap ${
+                  className={`h-14 px-6 flex items-center justify-center min-w-35 bg-transparent border rounded-full transition-all duration-300 whitespace-nowrap ${
                     isSelected
                       ? "bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]"
                       : "text-gray-text border-gray-dark hover:border-gray-text"
@@ -255,7 +256,7 @@ export default function MachineLineup() {
                         alt={brand}
                         width={140}
                         height={50}
-                        className={`object-contain max-h-8 w-auto transition-all duration-300 ${
+                        className={`object-contain w-30 h-auto transition-all duration-300 ${
                           isSelected
                             ? "filter-none"
                             : "brightness-0 invert opacity-40 hover:opacity-100"
@@ -294,59 +295,18 @@ export default function MachineLineup() {
         </div>
       </div>
 
-      <div className="flex overflow-x-auto gap-4 w-full px-6 pb-10 scroll-snap-type-x scroll-snap-type-mandatory [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] md:gap-6 md:px-0 md:pb-0 md:overflow-visible">
+      <div className="flex overflow-x-auto gap-4 w-full px-6 pb-10 scroll-snap-type-x scroll-snap-type-mandatory [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-6 md:px-0 md:pb-0 md:overflow-visible">
         {filteredMachines.map((machine) => {
           const logoPath = BRAND_LOGOS[machine.brand];
+          const partLabel = PARTS.find((p) => p.key === machine.part)?.label;
 
           return (
-            <div
+            <MachineListItem
               key={machine.id}
-              className="flex-[0_0_85%] scroll-snap-align-center bg-[#0c0c0c] border border-gray-dark shadow-lg overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-1 md:scroll-snap-align-none"
-            >
-              {/* Image Placeholder */}
-              <div className="w-full h-[180px] bg-[#1a1a1a] flex items-center justify-center text-gray-text text-[0.8rem] border-b border-gray-dark">
-                {machine.brand} Image
-              </div>
-
-              <div className="p-5 flex flex-col grow">
-                {" "}
-                <div className="flex justify-between items-start mb-2 min-h-[32px]">
-                  {logoPath ? (
-                    <div className="flex items-center">
-                      <Image
-                        src={logoPath}
-                        alt={machine.brand}
-                        width={100}
-                        height={40}
-                        className="brightness-0 invert object-contain max-w-[100px] max-h-[28px] w-auto"
-                      />
-                    </div>
-                  ) : (
-                    <span className="text-[0.85rem] font-bold text-red-primary uppercase tracking-[0.05em]">
-                      {machine.brand}
-                    </span>
-                  )}
-
-                  {machine.status === "arrived" ? (
-                    <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-red-primary/10 text-red-primary border border-red-primary/30 self-start uppercase tracking-wider">
-                      입고 완료
-                    </span>
-                  ) : (
-                    <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-white/5 text-gray-text border border-gray-dark self-start uppercase tracking-wider">
-                      {machine.date || "입고 예정"}
-                    </span>
-                  )}
-                </div>
-                <p className="text-[1.1rem] font-bold text-white leading-[1.3] mb-3">
-                  {machine.name}
-                </p>
-                <div className="mt-auto flex flex-col gap-[6px]">
-                  <span className="text-[0.8rem] text-[#666]">
-                    {PARTS.find((p) => p.key === machine.part)?.label}
-                  </span>
-                </div>
-              </div>
-            </div>
+              machine={machine}
+              logoPath={logoPath}
+              partLabel={partLabel}
+            />
           );
         })}
       </div>

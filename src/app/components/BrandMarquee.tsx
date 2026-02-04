@@ -14,33 +14,33 @@ const BRAND_DATA = [
 
 export default function BrandMarquee() {
   return (
-    <section className="w-full py-[60px] bg-black border-t border-b border-gray-dark overflow-hidden flex flex-col justify-center relative">
+    <section className="w-full py-6 md:py-10 bg-black border-t border-b border-gray-dark overflow-hidden flex flex-col justify-center relative">
       {/* Gradient fades */}
       <div className="absolute top-0 bottom-0 left-0 w-[100px] z-[2] pointer-events-none bg-gradient-to-r from-black to-transparent" />
       <div className="absolute top-0 bottom-0 right-0 w-[100px] z-[2] pointer-events-none bg-gradient-to-l from-black to-transparent" />
 
-      <div className="flex w-full overflow-hidden relative">
-        <div className="flex items-center gap-[120px] animate-scroll whitespace-nowrap pl-[120px] shadow-2xl will-change-transform md:gap-[80px] md:pl-[80px]">
+      <div className="group flex w-full overflow-hidden relative">
+        <div className="flex items-center gap-[60px] animate-scroll whitespace-nowrap pl-[60px] will-change-transform md:gap-[100px] md:pl-[100px] group-hover:[animation-play-state:paused]">
           {BRAND_DATA.map((brand, index) => (
-            <span key={`original-${index}`} className="flex items-center">
+            <span key={`original-${index}`} className="flex items-center shrink-0">
               <Image
                 src={brand.logo}
                 alt={brand.name}
-                width={280}
-                height={100}
-                className="w-[260px] h-auto object-contain brightness-0 invert-[0.3] transition-all duration-500 opacity-70 hover:brightness-0 hover:invert hover:opacity-100 hover:scale-110 md:w-[200px]"
+                width={240}
+                height={90}
+                className="w-auto h-[50px] max-w-[120px] object-contain brightness-0 invert-[0.3] opacity-70 transition-all duration-500 hover:brightness-0 hover:invert hover:opacity-100 hover:scale-110 md:h-[70px] md:max-w-[200px]"
               />
             </span>
           ))}
-          {/* Duplicate set */}
+          {/* Duplicate set for seamless loop */}
           {BRAND_DATA.map((brand, index) => (
-            <span key={`duplicate-${index}`} className="flex items-center">
+            <span key={`duplicate-${index}`} className="flex items-center shrink-0">
               <Image
                 src={brand.logo}
                 alt={brand.name}
-                width={280}
-                height={100}
-                className="w-[260px] h-auto object-contain brightness-0 invert-[0.3] transition-all duration-500 opacity-70 hover:brightness-0 hover:invert hover:opacity-100 hover:scale-110 md:w-[200px]"
+                width={240}
+                height={90}
+                className="w-auto h-[50px] max-w-[120px] object-contain brightness-0 invert-[0.3] opacity-70 transition-all duration-500 hover:brightness-0 hover:invert hover:opacity-100 hover:scale-110 md:h-[70px] md:max-w-[200px]"
               />
             </span>
           ))}
