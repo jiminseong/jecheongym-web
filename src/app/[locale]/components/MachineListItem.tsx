@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface Machine {
   id: number;
@@ -16,6 +19,8 @@ interface MachineListItemProps {
 }
 
 export default function MachineListItem({ machine, logoPath, partLabel }: MachineListItemProps) {
+  const t = useTranslations();
+
   return (
     <div className="flex-[0_0_85%] scroll-snap-align-center bg-[#0c0c0c] border border-gray-dark shadow-lg overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-1 md:scroll-snap-align-none">
       {/* Image Placeholder */}
@@ -43,11 +48,11 @@ export default function MachineListItem({ machine, logoPath, partLabel }: Machin
 
           {machine.status === "arrived" ? (
             <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-red-primary/10 text-red-primary border border-red-primary/30 self-start uppercase tracking-wider">
-              입고 완료
+              {t("sections.machineLineup.status.arrived")}
             </span>
           ) : (
             <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-white/5 text-gray-text border border-gray-dark self-start uppercase tracking-wider">
-              {machine.date || "입고 예정"}
+              {machine.date || t("sections.machineLineup.status.scheduled")}
             </span>
           )}
         </div>

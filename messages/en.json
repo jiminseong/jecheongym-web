@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "title": "Jecheon Gym | Serious Training Only",
+    "description": "The only high-end weight training gym in Jecheon. Features premium equipment from Arsenal Strength, Hammer Strength, and more.",
+    "siteName": "Jecheon Gym",
+    "ogImageAlt": "Jecheon Gym - Serious Training Only"
+  },
+  "hero": {
+    "slogan": "SERIOUS TRAINING ONLY.",
+    "subtitle": "Jecheon Gym is not for everyone.",
+    "subtitle2": "This space is exclusively for those who train seriously.",
+    "cta": {
+      "inquiry": "Inquiry",
+      "machineList": "View Equipment",
+      "location": "Location"
+    },
+    "newArrival": {
+      "badge": "NEW ARRIVAL",
+      "title": "Arsenal Strength",
+      "subtitle": "Reloaded ISO-Row",
+      "description": "Arrived Mar 2024. Lower back targeted."
+    }
+  },
+  "sections": {
+    "identity": {
+      "title": "Identity",
+      "line1": "We don't provide fancy interiors or comfortable lounges.",
+      "line2": "We focus solely on creating the best training environment.",
+      "line3": "In an uncompromising, intense atmosphere,",
+      "line4": "test your limits."
+    },
+    "rules": {
+      "title": "Message from Gym",
+      "intro": "This is a <strong>weight training specialized gym</strong>.",
+      "cardio": {
+        "title": "No cardio equipment available,",
+        "line1": "For cardio-focused training, we recommend Winners Fitness in Sinbaek-dong, which offers excellent ventilation and cardio facilities.",
+        "line2": "For others, enjoy outdoor cardio~",
+        "line3": "If you train seriously with weights, you won't have time for cardio.",
+        "line4": "Train as if you'll crawl out.. No talking, just training."
+      },
+      "mandatory": {
+        "title": "!MANDATORY!",
+        "rule1": "No outdoor shoes. Violators will be expelled!! CCTV recording",
+        "rule2": "(Don't make excuses like 'I changed in the car' or 'I changed downstairs'. It's obvious) We'll lend you shoes if you don't have any.",
+        "rule3": "Not organizing the weights you used = immediate expulsion!!",
+        "rule4": "BCAA, supplements, canned drinks, coffee, etc. - consume at tables only~!!",
+        "rule5": "Please be considerate.. Please..~~"
+      },
+      "etiquette1": "This is a shared space.",
+      "etiquette2": "Selfishness makes others uncomfortable.",
+      "training1": "The best trainers and gym history won't do your workout for you~",
+      "training2": "This is a self-training facility. We never pressure anyone for PT,",
+      "training3": "We're a weight training specialist gym.",
+      "closing": "Gain today too~^^"
+    },
+    "machineLineup": {
+      "title": "Machine Lineup Updates",
+      "filters": {
+        "brand": "BRAND",
+        "part": "PART"
+      },
+      "parts": {
+        "all": "All",
+        "legs": "Legs",
+        "back": "Back",
+        "chest": "Chest",
+        "shoulder": "Shoulder/Arms",
+        "etc": "Others"
+      },
+      "status": {
+        "arrived": "Arrived",
+        "scheduled": "Scheduled"
+      }
+    },
+    "location": {
+      "title": "LOCATION & INFO",
+      "address": "5F, Haengwoon Building, 3, Uirim-daero 18-gil, Jecheon-si, Chungcheongbuk-do",
+      "addressSub": "(79-26, Jungang-ro 2-ga, Jecheon-si, Chungbuk)",
+      "phone": "0507-1405-1134",
+      "weekday": "Weekdays 09:00 - 23:00",
+      "weekend": "Weekends 10:00 - 18:00",
+      "note": "* Open year-round (Entry closes 1.5 hours before closing)",
+      "cta": "KakaoTalk Inquiry"
+    }
+  },
+  "footer": {
+    "copyright": "Jecheon Gym. All rights reserved.",
+    "createdBy": "Created by"
+  },
+  "machines": {
+    "1": "Nitro Pullover",
+    "2": "Long Pull",
+    "3": "Super Lat Pulldown Circular",
+    "4": "Pendulum Squat",
+    "5": "Low Row",
+    "10": "Super Low Row",
+    "11": "Super High Row",
+    "12": "Super Rowing Circular",
+    "13": "Super Squat",
+    "20": "Nitro Incline Chest",
+    "21": "Nitro Vertical Chest",
+    "22": "Explode Chest Press",
+    "23": "Nitro Dips",
+    "30": "Super Squat 624",
+    "31": "712CXP Pull Down",
+    "40": "Side Lateral Raise Machine",
+    "41": "Shoulder Press",
+    "42": "Row Machine",
+    "50": "Peck Deck Fly Machine"
+  },
+  "dates": {
+    "scheduled": "Scheduled"
+  }
+}

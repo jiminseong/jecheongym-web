@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "title": "제천남여헬스장 | Serious Training Only",
+    "description": "제천 유일의 하이엔드 웨이트 전문 헬스장. 아스널 스트렝스, 해머 스트렝스 등 최고의 기구 라인업.",
+    "siteName": "제천남여헬스장",
+    "ogImageAlt": "제천남여헬스장 - Serious Training Only"
+  },
+  "hero": {
+    "slogan": "SERIOUS TRAINING ONLY.",
+    "subtitle": "제천남여헬스장은 모두를 위한 헬스장이 아닙니다.",
+    "subtitle2": "오직 진지하게 훈련하는 분들만을 위한 공간입니다.",
+    "cta": {
+      "inquiry": "입관 문의하기",
+      "machineList": "기구 리스트 보기",
+      "location": "위치 확인하기"
+    },
+    "newArrival": {
+      "badge": "NEW ARRIVAL",
+      "title": "Arsenal Strength",
+      "subtitle": "Reloaded ISO-Row",
+      "description": "2024.03 입고 완료. 등 하부 타겟."
+    }
+  },
+  "sections": {
+    "identity": {
+      "title": "Identity",
+      "line1": "우리는 화려한 인테리어나 편안한 휴게 공간을 제공하지 않습니다.",
+      "line2": "오로지 최고의 훈련 환경을 만드는데 집중했습니다.",
+      "line3": "타협하지 않는 무거운 분위기 속에서",
+      "line4": "당신의 한계를 시험해 보십시오."
+    },
+    "rules": {
+      "title": "Message from Gym",
+      "intro": "본 센타는 <strong>웨이트트레이닝 전문점</strong> 입니다.",
+      "cardio": {
+        "title": "유산소기구 없습니다,",
+        "line1": "뜀박질(유산소) 목적이신 분들은 (신백동 위너스휘트니스)제천에서 유산소기구,환기시설이 제일 잘 되어 있어 ,쾌적하게 이용 하실 수 있습니다.",
+        "line2": "그외 분들은,, 야외에서 양껏 즐겨주십시요~",
+        "line3": "웨이트로 진심 털어 버리면 유산소 할 시간조차 없습니다.",
+        "line4": "기어나갈 각오로 운동하세요.. 입으로 운동X"
+      },
+      "mandatory": {
+        "title": "!필수사항!",
+        "rule1": "외부신발 입장금지.적발시 강퇴~!! CCTV촬영중",
+        "rule2": "(차에서 갈아신었다는둥,밑에서 갈아신었다는둥 이런말씀 하지마세요. 티 많이 납니다)안가져오시면 빌려드립니다.",
+        "rule3": "본인이 사용한 원판정리 안될시 이유불문 강퇴!!",
+        "rule4": "bcaa,보충제,캔음료,커피등등 티테이블에서만 섭취~!!",
+        "rule5": "매너 부탁드립니다..제발..~~"
+      },
+      "etiquette1": "다수가 이용하는 공간입니다.",
+      "etiquette2": "본인만을 위한 행동은 타인을 불쾌하게 합니다",
+      "training1": "최고의강사진, 관장이력 이런게 본인운동 대신해 주지 않습니다~",
+      "training2": "본 센타는 자율운동을 하는 곳 입니다. 피티강요는(눈치) 일절 하지않는,",
+      "training3": "웨이트 전문점입니다.",
+      "closing": "오늘도 득근 하십시요~^^"
+    },
+    "machineLineup": {
+      "title": "Machine Lineup Updates",
+      "filters": {
+        "brand": "BRAND",
+        "part": "PART"
+      },
+      "parts": {
+        "all": "전체",
+        "legs": "하체",
+        "back": "등",
+        "chest": "가슴",
+        "shoulder": "어깨/팔",
+        "etc": "기타"
+      },
+      "status": {
+        "arrived": "입고 완료",
+        "scheduled": "입고 예정"
+      }
+    },
+    "location": {
+      "title": "LOCATION & INFO",
+      "address": "충청북도 제천시 의림대로18길 3 행운빌딩 5층",
+      "addressSub": "(충북 제천시 중앙로2가 79-26)",
+      "phone": "0507-1405-1134",
+      "weekday": "평일 09:00 - 23:00",
+      "weekend": "주말 10:00 - 18:00",
+      "note": "* 연중무휴 (마감 1시간 30분 전 입장 마감)",
+      "cta": "KakaoTalk 문의"
+    }
+  },
+  "footer": {
+    "copyright": "제천남여헬스장. All rights reserved.",
+    "createdBy": "Created by"
+  },
+  "machines": {
+    "1": "Nitro Pullover",
+    "2": "Long Pull",
+    "3": "Super Lat Pulldown Circular",
+    "4": "Pendulum Squat",
+    "5": "Low Row",
+    "10": "Super Low Row",
+    "11": "Super High Row",
+    "12": "Super Rowing Circular",
+    "13": "Super Squat",
+    "20": "Nitro Incline Chest",
+    "21": "Nitro Vertical Chest",
+    "22": "Explode Chest Press",
+    "23": "Nitro Dips",
+    "30": "Super Squat 624",
+    "31": "712CXP Pull Down",
+    "40": "Side Lateral Raise Machine",
+    "41": "Shoulder Press",
+    "42": "Row Machine",
+    "50": "Peck Deck Fly Machine"
+  },
+  "dates": {
+    "scheduled": "예정"
+  }
+}

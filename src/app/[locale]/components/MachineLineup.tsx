@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useMemo } from "react";
 import MachineListItem from "./MachineListItem";
+import { useTranslations } from "next-intl";
 
 type MachineStatus = "arrived" | "scheduled";
 type MachinePart = "All" | "Chest" | "Back" | "Legs" | "Shoulder" | "Etc";
@@ -182,18 +183,20 @@ const BRANDS: MachineBrand[] = [
   "Arsenal Strength",
   "Others",
 ];
-const PARTS: { key: MachinePart; label: string }[] = [
-  { key: "All", label: "전체" },
-  { key: "Legs", label: "하체" },
-  { key: "Back", label: "등" },
-  { key: "Chest", label: "가슴" },
-  { key: "Shoulder", label: "어깨/팔" },
-  { key: "Etc", label: "기타" },
-];
 
 export default function MachineLineup() {
+  const t = useTranslations();
   const [selectedBrand, setSelectedBrand] = useState<MachineBrand>("All");
   const [selectedPart, setSelectedPart] = useState<MachinePart>("All");
+
+  const PARTS: { key: MachinePart; label: string }[] = [
+    { key: "All", label: t("sections.machineLineup.parts.all") },
+    { key: "Legs", label: t("sections.machineLineup.parts.legs") },
+    { key: "Back", label: t("sections.machineLineup.parts.back") },
+    { key: "Chest", label: t("sections.machineLineup.parts.chest") },
+    { key: "Shoulder", label: t("sections.machineLineup.parts.shoulder") },
+    { key: "Etc", label: t("sections.machineLineup.parts.etc") },
+  ];
 
   const filteredMachines = useMemo(() => {
     return MACHINES.filter((machine) => {
@@ -224,14 +227,14 @@ export default function MachineLineup() {
       id="machine-lineup"
     >
       <h3 className="text-2xl text-white mb-8 text-center uppercase tracking-widest md:px-6 md:mb-6">
-        Machine Lineup Updates
+        {t("sections.machineLineup.title")}
       </h3>
 
       <div className="flex flex-col gap-6 mb-12 w-full items-start md:px-6">
         {/* Brand Filter */}
         <div className="w-full">
           <span className="text-gray-text text-[0.75rem] font-bold ml-6 mb-3 uppercase tracking-widest block md:ml-0">
-            BRAND
+            {t("sections.machineLineup.filters.brand")}
           </span>
           <div className="flex flex-nowrap overflow-x-auto w-full gap-3 px-6 pt-2 pb-4 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0 md:flex-wrap md:overflow-visible md:pb-0">
             {BRANDS.map((brand) => {
@@ -275,7 +278,7 @@ export default function MachineLineup() {
         {/* Part Filter */}
         <div className="w-full">
           <span className="text-gray-text text-[0.75rem] font-bold ml-6 mb-3 uppercase tracking-widest block md:ml-0">
-            PART
+            {t("sections.machineLineup.filters.part")}
           </span>
           <div className="flex flex-nowrap overflow-x-auto w-full gap-2 px-6 pb-2 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0 md:flex-wrap md:overflow-visible">
             {PARTS.map((part) => (
@@ -299,11 +302,12 @@ export default function MachineLineup() {
         {filteredMachines.map((machine) => {
           const logoPath = BRAND_LOGOS[machine.brand];
           const partLabel = PARTS.find((p) => p.key === machine.part)?.label;
+          const translatedName = t(`machines.${machine.id}`);
 
           return (
             <MachineListItem
               key={machine.id}
-              machine={machine}
+              machine={{ ...machine, name: translatedName }}
               logoPath={logoPath}
               partLabel={partLabel}
             />
