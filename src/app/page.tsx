@@ -1,62 +1,75 @@
-import styles from "./page.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import MachineLineup from "./components/MachineLineup";
 import BrandMarquee from "./components/BrandMarquee";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className={`${styles.section} ${styles.hero}`}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            SERIOUS
-            <br />
-            TRAINING
-            <br />
-            ONLY.
-          </h1>
-          <p className={styles.heroSubtitle}>
-            제천남여헬스장은 모두를 위한 헬스장이 아닙니다.
-            <br />
-            오직 진지하게 훈련하는 분들만을 위한 공간입니다.
-          </p>
-          <div className={styles.heroActions}>
-            <Link href="https://open.kakao.com" target="_blank" className={styles.ctaButton}>
-              입관 문의하기
-            </Link>
-            <Link href="#machine-lineup" className={`${styles.ctaButton} ${styles.ctaSecondary}`}>
-              기구 리스트 보기
-            </Link>
-            <Link href="#info" className={`${styles.ctaButton} ${styles.ctaSecondary}`}>
-              위치 확인하기
-            </Link>
-          </div>
-        </div>
-
-        {/* New Arrival Update Card */}
-        <div className={styles.newUpdateCard}>
-          <div className={styles.newUpdateBadge}>NEW ARRIVAL</div>
-          <div className={styles.newUpdateMedia}>
-            {/* Placeholder for Video/Image */}
-            <div className={styles.mediaPlay}>▶</div>
-          </div>
-          <div className={styles.newUpdateInfo}>
-            <h3 className={styles.newUpdateTitle}>
-              Arsenal Strength
+      <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
+        <div className="max-w-[1200px] w-full flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-[4rem] md:text-[3rem] font-black leading-[1.1] mb-6 tracking-tight">
+              SERIOUS
               <br />
-              Reloaded ISO-Row
-            </h3>
-            <p className={styles.newUpdateDesc}>2024.03 입고 완료. 등 하부 타겟.</p>
+              TRAINING
+              <br />
+              ONLY.
+            </h1>
+            <p className="text-lg md:text-base text-[#ccc] mb-8 leading-relaxed">
+              제천남여헬스장은 모두를 위한 헬스장이 아닙니다.
+              <br />
+              오직 진지하게 훈련하는 분들만을 위한 공간입니다.
+            </p>
+            <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+              <Link
+                href="https://open.kakao.com"
+                target="_blank"
+                className="inline-block bg-[#cc0000] text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#ff3333] hover:scale-105"
+              >
+                입관 문의하기
+              </Link>
+              <Link
+                href="#machine-lineup"
+                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+              >
+                기구 리스트 보기
+              </Link>
+              <Link
+                href="#info"
+                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+              >
+                위치 확인하기
+              </Link>
+            </div>
+          </div>
+
+          {/* New Arrival Update Card */}
+          <div className="flex-1 max-w-[500px] w-full bg-[#0a0a0a] border border-[#222] overflow-hidden transition-all duration-300 hover:border-[#cc0000] hover:scale-105">
+            <div className="bg-[#cc0000] text-white text-xs font-bold px-4 py-2 uppercase tracking-wider">
+              NEW ARRIVAL
+            </div>
+            <div className="relative w-full h-[280px] bg-[#1a1a1a] flex items-center justify-center border-b border-[#222]">
+              <div className="w-16 h-16 rounded-full bg-[rgba(204,0,0,0.2)] border-2 border-[#cc0000] flex items-center justify-center text-[#cc0000] text-2xl cursor-pointer transition-all duration-300 hover:bg-[rgba(204,0,0,0.4)] hover:scale-110">
+                ▶
+              </div>
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-2 leading-tight">
+                Arsenal Strength
+                <br />
+                Reloaded ISO-Row
+              </h3>
+              <p className="text-[#888] text-sm">2024.03 입고 완료. 등 하부 타겟.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Philosophy Section */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Identity</h2>
-        <p className={styles.sectionText}>
+      <section className="py-20 px-6 text-center max-w-[900px] mx-auto">
+        <h2 className="text-3xl font-bold mb-8 uppercase tracking-wider">Identity</h2>
+        <p className="text-lg text-[#ccc] leading-relaxed">
           우리는 화려한 인테리어나 편안한 휴게 공간을 제공하지 않습니다.
           <br />
           오로지 최고의 훈련 환경을 만드는데 집중했습니다.
@@ -69,15 +82,17 @@ export default function Home() {
       </section>
 
       {/* Rules Section (Letter Style) */}
-      <section className={`${styles.section} ${styles.rules}`}>
-        <div className={styles.letterContainer}>
-          <div className={styles.letterTitle}>Message from Gym</div>
-          <div className={styles.letterBody}>
-            <div className={styles.letterSection}>
-              본 센타는 <span className={styles.highlight}>웨이트트레이닝 전문점</span> 입니다.
+      <section className="py-20 px-6">
+        <div className="max-w-[800px] mx-auto bg-[#0a0a0a] border border-[#222] p-8 md:p-12">
+          <div className="text-center text-xl font-bold mb-8 uppercase tracking-wider text-[#cc0000]">
+            Message from Gym
+          </div>
+          <div className="space-y-6 text-[#ccc] leading-relaxed">
+            <div>
+              본 센타는 <span className="text-white font-bold">웨이트트레이닝 전문점</span> 입니다.
             </div>
 
-            <div className={styles.letterSection}>
+            <div>
               유산소기구 없습니다,
               <br />
               뜀박질(유산소) 목적이신 분들은 (신백동 위너스휘트니스)제천에서 유산소기구,환기시설이
@@ -91,8 +106,8 @@ export default function Home() {
               기어나갈 각오로 운동하세요.. 입으로 운동X
             </div>
 
-            <div className={styles.importantBox}>
-              <span className={styles.importantTitle}>!필수사항!</span>
+            <div className="bg-[rgba(204,0,0,0.1)] border-l-4 border-[#cc0000] p-6 my-6">
+              <span className="block text-[#cc0000] font-bold mb-3 text-lg">!필수사항!</span>
               외부신발 입장금지.적발시 강퇴~!! CCTV촬영중
               <br />
               (차에서 갈아신었다는둥,밑에서 갈아신었다는둥 이런말씀 하지마세요. 티 많이
@@ -107,13 +122,13 @@ export default function Home() {
               매너 부탁드립니다..제발..~~
             </div>
 
-            <div className={styles.letterSection}>
+            <div>
               다수가 이용하는 공간입니다.
               <br />
               본인만을 위한 행동은 타인을 불쾌하게 합니다
             </div>
 
-            <div className={styles.letterSection}>
+            <div>
               최고의강사진, 관장이력 이런게 본인운동 대신해 주지 않습니다~
               <br />
               본 센타는 자율운동을 하는 곳 입니다. 피티강요는(눈치) 일절 하지않는,
@@ -121,7 +136,9 @@ export default function Home() {
               웨이트 전문점입니다.
             </div>
 
-            <div className={styles.closing}>오늘도 득근 하십시요~^^</div>
+            <div className="text-center text-white font-bold text-lg mt-8">
+              오늘도 득근 하십시요~^^
+            </div>
           </div>
         </div>
       </section>
@@ -135,51 +152,45 @@ export default function Home() {
       </div>
 
       {/* Location & Info Section */}
-      <section className={styles.section} id="info">
-        <h2 className={styles.sectionTitle}>LOCATION & INFO</h2>
-        <div className={styles.sectionText} style={{ marginBottom: "40px" }}>
-          <p style={{ marginBottom: "24px" }}>
-            <strong style={{ color: "var(--color-white)" }}>
+      <section className="py-20 px-6 text-center" id="info">
+        <h2 className="text-3xl font-bold mb-12 uppercase tracking-wider">LOCATION & INFO</h2>
+        <div className="max-w-[600px] mx-auto mb-10">
+          <p className="mb-6">
+            <strong className="text-white text-lg">
               충청북도 제천시 의림대로18길 3 행운빌딩 5층
             </strong>
             <br />
             (충북 제천시 중앙로2가 79-26)
           </p>
 
-          <p
-            style={{
-              marginBottom: "24px",
-              color: "var(--color-red)",
-              fontWeight: "700",
-              fontSize: "1.25rem",
-              letterSpacing: "0.05em",
-            }}
-          >
-            0507-1405-1134
-          </p>
+          <p className="text-[#cc0000] font-bold text-2xl tracking-wider mb-6">0507-1405-1134</p>
 
-          <p>
-            <span style={{ display: "block", marginBottom: "4px" }}>평일 09:00 - 23:00</span>
-            <span style={{ display: "block", marginBottom: "8px" }}>주말 10:00 - 18:00</span>
-            <span style={{ fontSize: "0.9rem", color: "var(--color-gray)", display: "block" }}>
+          <p className="text-[#ccc]">
+            <span className="block mb-1">평일 09:00 - 23:00</span>
+            <span className="block mb-2">주말 10:00 - 18:00</span>
+            <span className="text-sm text-[#888] block">
               * 연중무휴 (마감 1시간 30분 전 입장 마감)
             </span>
           </p>
         </div>
 
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", justifyContent: "center" }}>
-          <Link href="https://open.kakao.com" target="_blank" className={styles.ctaButton}>
+        <div className="flex gap-5 flex-wrap justify-center">
+          <Link
+            href="https://open.kakao.com"
+            target="_blank"
+            className="inline-block bg-[#cc0000] text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#ff3333] hover:scale-105"
+          >
             KakaoTalk 문의
           </Link>
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <p className={styles.footerInfo}>
+      <footer className="py-12 px-6 text-center border-t border-[#222]">
+        <p className="text-sm text-[#666]">
           &copy; {new Date().getFullYear()} 제천남여헬스장. All rights reserved.
           <br />
           Created by{" "}
-          <Link href="https://mildolab.com" target="_blank" style={{ textDecoration: "underline" }}>
+          <Link href="https://mildolab.com" target="_blank" className="underline hover:text-white">
             Mildo
           </Link>
         </p>
