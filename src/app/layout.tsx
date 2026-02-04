@@ -21,6 +21,7 @@ const nanumPen = Nanum_Pen_Script({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jecheongym-web.vercel.app"),
   title: "제천남여헬스장 | Serious Training Only",
   description:
     "제천 유일의 하이엔드 웨이트 전문 헬스장. 아스널 스트렝스, 해머 스트렝스 등 최고의 기구 라인업.",
@@ -28,14 +29,24 @@ export const metadata: Metadata = {
     title: "제천남여헬스장 | Serious Training Only",
     description:
       "제천 유일의 하이엔드 웨이트 전문 헬스장. 아스널 스트렝스, 해머 스트렝스 등 최고의 기구 라인업.",
+    url: "https://jecheongym-web.vercel.app",
     siteName: "제천남여헬스장",
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "제천남여헬스장 - Serious Training Only",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "제천남여헬스장 | Serious Training Only",
     description: "제천 유일의 하이엔드 웨이트 전문 헬스장. 최고의 훈련 환경을 제공합니다.",
+    images: ["/og-image.png"],
   },
 };
 
