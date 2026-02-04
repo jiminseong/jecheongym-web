@@ -4,6 +4,19 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/config";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import { Noto_Sans_KR, Nanum_Pen_Script } from "next/font/google";
+
+const notoSansKr = Noto_Sans_KR({
+  variable: "--font-noto-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"],
+});
+
+const nanumPen = Nanum_Pen_Script({
+  variable: "--font-nanum-pen",
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -70,8 +83,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body>
+    <html lang={locale} suppressHydrationWarning>
+      <body className={`${notoSansKr.variable} ${nanumPen.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <LanguageSwitcher />
           {children}

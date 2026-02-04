@@ -25,9 +25,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html suppressHydrationWarning>
-      <body className={`${notoSansKr.variable} ${nanumPen.variable}`}>{children}</body>
-    </html>
-  );
+  return children;
 }
