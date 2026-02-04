@@ -1,4 +1,12 @@
 {
+  "common": {
+    "copied": "Copied!",
+    "copyAddress": "Copy Address",
+    "copyKakaoId": "Copy ID",
+    "kakaoGuide": "Search this ID on KakaoTalk",
+    "openKakaoMap": "Open in KakaoMap",
+    "openNaverMap": "Open in Naver Map"
+  },
   "metadata": {
     "title": "Jecheon Gym | Serious Training Only",
     "description": "The only high-end weight training gym in Jecheon. Features premium equipment from Arsenal Strength, Hammer Strength, and more.",

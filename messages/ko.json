@@ -1,4 +1,12 @@
 {
+  "common": {
+    "copied": "복사 완료!",
+    "copyAddress": "주소 복사",
+    "copyKakaoId": "아이디 복사",
+    "kakaoGuide": "카카오톡에서 아래 아이디를 검색해주세요",
+    "openKakaoMap": "카카오맵에서 보기",
+    "openNaverMap": "네이버 지도에서 보기"
+  },
   "metadata": {
     "title": "제천남여헬스장 | Serious Training Only",
     "description": "제천 유일의 하이엔드 웨이트 전문 헬스장. 아스널 스트렝스, 해머 스트렝스 등 최고의 기구 라인업.",

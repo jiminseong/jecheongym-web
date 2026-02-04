@@ -1,13 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import MachineLineup from "./components/MachineLineup";
 import BrandMarquee from "./components/BrandMarquee";
+import KakaoMap from "./components/KakaoMap";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
+const KAKAO_ID = "muscle2020";
+const ADDRESS = "충청북도 제천시 의림대로18길 3 행운빌딩 5층";
+const NAVER_MAP_URL = "https://map.naver.com/p/entry/place/13146435";
+const KAKAO_MAP_URL = "https://map.kakao.com/link/search/충청북도 제천시 의림대로18길 3";
+
 export default function Home() {
   const t = useTranslations();
+  const [copiedKakao, setCopiedKakao] = useState(false);
+  const [copiedAddress, setCopiedAddress] = useState(false);
+
+  const copyToClipboard = async (text: string, type: "kakao" | "address") => {
+    try {
+      await navigator.clipboard.writeText(text);
+      if (type === "kakao") {
+        setCopiedKakao(true);
+        setTimeout(() => setCopiedKakao(false), 2000);
+      } else {
+        setCopiedAddress(true);
+        setTimeout(() => setCopiedAddress(false), 2000);
+      }
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   // Animation variants
   const fadeInUp = {
@@ -68,13 +92,12 @@ export default function Home() {
               className="flex md:flex-row flex-col gap-4 justify-center md:justify-start w-full md:max-w-[800px]"
             >
               <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
-                <Link
-                  href="https://open.kakao.com"
-                  target="_blank"
-                  className="block bg-red-primary text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-red-hover hover:scale-105 text-center"
+                <button
+                  onClick={() => copyToClipboard(KAKAO_ID, "kakao")}
+                  className="block w-full bg-red-primary text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-red-hover hover:scale-105 text-center cursor-pointer"
                 >
-                  {t("hero.cta.inquiry")}
-                </Link>
+                  {copiedKakao ? t("common.copied") : t("hero.cta.inquiry")}
+                </button>
               </motion.div>
               <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
                 <Link
@@ -209,38 +232,106 @@ export default function Home() {
       </div>
 
       {/* Location & Info Section */}
-      <section className="py-20 px-6 text-center" id="info">
-        <h2 className="text-3xl font-bold mb-12 uppercase tracking-wider">
+      <section className="py-20 px-6" id="info">
+        <h2 className="text-3xl font-bold mb-12 uppercase tracking-wider text-center">
           {t("sections.location.title")}
         </h2>
-        <div className="max-w-[600px] mx-auto mb-10">
-          <p className="mb-6">
-            <strong className="text-white text-lg whitespace-pre-line">
-              {t("sections.location.address")}
-            </strong>
-            <br />
-            {t("sections.location.addressSub")}
-          </p>
 
-          <p className="text-[#cc0000] font-bold text-2xl tracking-wider mb-6">
-            {t("sections.location.phone")}
-          </p>
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-8 md:gap-12">
+          {/* Left: Info */}
+          <div className="flex-1 flex flex-col justify-center">
+            <div className="mb-8">
+              <p className="text-white text-lg whitespace-pre-line font-bold mb-2">
+                {t("sections.location.address")}
+              </p>
+              <p className="text-[#888] text-sm mb-3">{t("sections.location.addressSub")}</p>
+              <button
+                onClick={() => copyToClipboard(ADDRESS, "address")}
+                className="inline-flex items-center gap-2 text-sm text-[#ccc] hover:text-white transition-colors cursor-pointer border border-[#444] px-3 py-1.5 hover:border-[#888]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                {copiedAddress ? t("common.copied") : t("common.copyAddress")}
+              </button>
+            </div>
 
-          <p className="text-[#ccc]">
-            <span className="block mb-1">{t("sections.location.weekday")}</span>
-            <span className="block mb-2">{t("sections.location.weekend")}</span>
-            <span className="text-sm text-[#888] block">{t("sections.location.note")}</span>
-          </p>
-        </div>
+            <p className="text-[#cc0000] font-bold text-2xl tracking-wider mb-6">
+              {t("sections.location.phone")}
+            </p>
 
-        <div className="flex gap-5 flex-wrap justify-center">
-          <Link
-            href="https://open.kakao.com"
-            target="_blank"
-            className="inline-block bg-[#cc0000] text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#ff3333] hover:scale-105"
-          >
-            {t("sections.location.cta")}
-          </Link>
+            <div className="text-[#ccc] mb-8">
+              <span className="block mb-1">{t("sections.location.weekday")}</span>
+              <span className="block mb-2">{t("sections.location.weekend")}</span>
+              <span className="text-sm text-[#888] block">{t("sections.location.note")}</span>
+            </div>
+
+            {/* KakaoTalk ID */}
+            <div className="bg-[#111] border border-[#333] px-6 py-4 mb-4">
+              <p className="text-sm text-[#888] mb-2">{t("common.kakaoGuide")}</p>
+              <p className="text-xl font-bold text-[#FEE500] tracking-wider">{KAKAO_ID}</p>
+            </div>
+            <button
+              onClick={() => copyToClipboard(KAKAO_ID, "kakao")}
+              className="inline-flex items-center justify-center gap-2 bg-[#FEE500] text-[#000] px-6 py-3 text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#FFD700] cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              {copiedKakao ? t("common.copied") : t("common.copyKakaoId")}
+            </button>
+          </div>
+
+          {/* Right: Map */}
+          <div className="flex-1 flex flex-col">
+            <div className="border border-[#333] overflow-hidden flex-1">
+              <KakaoMap />
+            </div>
+
+            {/* Map Buttons */}
+            <div className="flex gap-3 mt-4">
+              <Link
+                href={KAKAO_MAP_URL}
+                target="_blank"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-[#FEE500] text-[#000] px-4 py-3 text-sm font-bold transition-all duration-300 hover:bg-[#FFD700]"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 5.58 2 10c0 2.84 1.86 5.32 4.64 6.72-.14.52-.58 2.08-.66 2.4-.1.39.14.38.3.28.12-.08 1.94-1.32 2.72-1.86.64.1 1.32.16 2 .16 5.52 0 10-3.58 10-8S17.52 2 12 2z" />
+                </svg>
+                {t("common.openKakaoMap")}
+              </Link>
+              <Link
+                href={NAVER_MAP_URL}
+                target="_blank"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-[#03C75A] text-white px-4 py-3 text-sm font-bold transition-all duration-300 hover:bg-[#02b350]"
+              >
+                <span className="text-lg font-extrabold">N</span>
+                {t("common.openNaverMap")}
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
