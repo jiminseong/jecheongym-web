@@ -7,8 +7,8 @@
   },
   "hero": {
     "slogan": "SERIOUS TRAINING ONLY.",
-    "subtitle": "제천남여헬스장은 모두를 위한 헬스장이 아닙니다.",
-    "subtitle2": "오직 진지하게 훈련하는 분들만을 위한 공간입니다.",
+    "subtitle": "제천남여헬스장은\n모두를 위한 헬스장이 아닙니다.\n",
+    "subtitle2": "오직 진지하게 훈련하는\n분들만을 위한 공간입니다.",
     "cta": {
       "inquiry": "입관 문의하기",
       "machineList": "기구 리스트 보기",
@@ -24,8 +24,8 @@
   "sections": {
     "identity": {
       "title": "Identity",
-      "line1": "우리는 화려한 인테리어나 편안한 휴게 공간을 제공하지 않습니다.",
-      "line2": "오로지 최고의 훈련 환경을 만드는데 집중했습니다.",
+      "line1": "우리는 화려한 인테리어나\n 편안한 휴게 공간을 제공하지 않습니다.\n",
+      "line2": "오로지 최고의 훈련 환경을\n만드는데 집중했습니다.",
       "line3": "타협하지 않는 무거운 분위기 속에서",
       "line4": "당신의 한계를 시험해 보십시오."
     },
@@ -75,7 +75,7 @@
     },
     "location": {
       "title": "LOCATION & INFO",
-      "address": "충청북도 제천시 의림대로18길 3 행운빌딩 5층",
+      "address": "충청북도 제천시\n의림대로18길 3 행운빌딩 5층",
       "addressSub": "(충북 제천시 중앙로2가 79-26)",
       "phone": "0507-1405-1134",
       "weekday": "평일 09:00 - 23:00",
@@ -110,6 +110,7 @@
     "50": "Peck Deck Fly Machine"
   },
   "dates": {
-    "scheduled": "예정"
+    "scheduled": "예정",
+    "earlyJan": "1월 초"
   }
 }

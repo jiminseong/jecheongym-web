@@ -49,7 +49,7 @@ const MACHINES: Machine[] = [
     brand: "Nautilus",
     part: "Back",
     status: "scheduled",
-    date: "2026.01.29 예정",
+    date: "26.01.29",
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const MACHINES: Machine[] = [
     brand: "Icarian",
     part: "Back",
     status: "scheduled",
-    date: "1월 초 예정",
+    date: "dates.earlyJan",
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const MACHINES: Machine[] = [
     brand: "Panatta",
     part: "Back",
     status: "scheduled",
-    date: "입고 예정",
+    date: "",
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ const MACHINES: Machine[] = [
     brand: "Atlantis",
     part: "Legs",
     status: "scheduled",
-    date: "2026.04 예정",
+    date: "26.04",
   },
   {
     id: 5,

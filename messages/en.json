@@ -24,7 +24,7 @@
   "sections": {
     "identity": {
       "title": "Identity",
-      "line1": "We don't provide fancy interiors or comfortable lounges.",
+      "line1": "We don't provide fancy interiors or comfortable lounges.\n",
       "line2": "We focus solely on creating the best training environment.",
       "line3": "In an uncompromising, intense atmosphere,",
       "line4": "test your limits."
@@ -75,8 +75,8 @@
     },
     "location": {
       "title": "LOCATION & INFO",
-      "address": "5F, Haengwoon Building, 3, Uirim-daero 18-gil, Jecheon-si, Chungcheongbuk-do",
-      "addressSub": "(79-26, Jungang-ro 2-ga, Jecheon-si, Chungbuk)",
+      "address": "5F, 3, Uirim-daero 18-gil, Jecheon-si, Chungcheongbuk-do",
+      "addressSub": "(79-26, Jungang-ro 2-ga,\n Jecheon-si, Chungbuk)",
       "phone": "0507-1405-1134",
       "weekday": "Weekdays 09:00 - 23:00",
       "weekend": "Weekends 10:00 - 18:00",
@@ -110,6 +110,7 @@
     "50": "Peck Deck Fly Machine"
   },
   "dates": {
-    "scheduled": "Scheduled"
+    "scheduled": "Soon",
+    "earlyJan": "Early Jan"
   }
 }

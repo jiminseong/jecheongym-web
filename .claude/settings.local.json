@@ -4,6 +4,10 @@
       "Bash(ps:*)",
       "Bash(npm install:*)",
       "Bash(npm run build:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/jiminseong/외주 서비스/jecheongym/jecheongym-web/messages",
+      "/Users/jiminseong/외주 서비스/jecheongym/jecheongym-web/messages"
     ]
   }
 }

@@ -24,7 +24,7 @@ export default function Home() {
               <br />
               ONLY.
             </h1>
-            <p className="text-xl md:text-lg text-[#ccc] mb-10 leading-relaxed max-w-150 mx-auto md:mx-0">
+            <p className="text-xl md:text-lg text-[#ccc] mb-10 leading-relaxed max-w-150 mx-auto md:mx-0 whitespace-pre-line">
               {t("hero.subtitle")}
               <br />
               {t("hero.subtitle2")}
@@ -79,7 +79,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8 uppercase tracking-wider">
           {t("sections.identity.title")}
         </h2>
-        <p className="text-lg text-[#ccc] leading-relaxed">
+        <p className="text-lg text-[#ccc] leading-relaxed whitespace-pre-line">
           {t("sections.identity.line1")}
           <br />
           {t("sections.identity.line2")}
@@ -166,7 +166,7 @@ export default function Home() {
         </h2>
         <div className="max-w-[600px] mx-auto mb-10">
           <p className="mb-6">
-            <strong className="text-white text-lg">{t("sections.location.address")}</strong>
+            <strong className="text-white text-lg whitespace-pre-line">{t("sections.location.address")}</strong>
             <br />
             {t("sections.location.addressSub")}
           </p>

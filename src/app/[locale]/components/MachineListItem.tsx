@@ -51,8 +51,12 @@ export default function MachineListItem({ machine, logoPath, partLabel }: Machin
               {t("sections.machineLineup.status.arrived")}
             </span>
           ) : (
-            <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-white/5 text-gray-text border border-gray-dark self-start uppercase tracking-wider">
-              {machine.date || t("sections.machineLineup.status.scheduled")}
+            <span className="inline-block px-2 py-1 text-[0.6rem] font-black rounded bg-white/5 text-gray-text border border-gray-dark self-start uppercase tracking-tight">
+              {machine.date
+                ? machine.date.startsWith("dates.")
+                  ? `${t(machine.date)} ${t("dates.scheduled")}`
+                  : `${machine.date} ${t("dates.scheduled")}`
+                : t("sections.machineLineup.status.scheduled")}
             </span>
           )}
         </div>
