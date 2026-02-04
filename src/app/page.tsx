@@ -9,14 +9,14 @@ export default function Home() {
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
         <div className="max-w-[1200px] w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-[4rem] md:text-[3rem] font-black leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-[5rem] md:text-[6.5rem] font-black leading-[0.9] mb-8 tracking-tighter">
               SERIOUS
               <br />
               TRAINING
               <br />
               ONLY.
             </h1>
-            <p className="text-lg md:text-base text-[#ccc] mb-8 leading-relaxed">
+            <p className="text-xl md:text-lg text-[#ccc] mb-10 leading-relaxed max-w-[600px] mx-auto md:mx-0">
               제천남여헬스장은 모두를 위한 헬스장이 아닙니다.
               <br />
               오직 진지하게 훈련하는 분들만을 위한 공간입니다.
@@ -25,19 +25,19 @@ export default function Home() {
               <Link
                 href="https://open.kakao.com"
                 target="_blank"
-                className="inline-block bg-[#cc0000] text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#ff3333] hover:scale-105"
+                className="inline-block bg-[#cc0000] text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-[#ff3333] hover:scale-105"
               >
                 입관 문의하기
               </Link>
               <Link
                 href="#machine-lineup"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+                className="inline-block bg-transparent border-[1px] border-white text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
               >
                 기구 리스트 보기
               </Link>
               <Link
                 href="#info"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
+                className="inline-block bg-transparent border-[1px] border-white text-white px-10 py-5 text-base font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-black"
               >
                 위치 확인하기
               </Link>

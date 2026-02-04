@@ -174,6 +174,7 @@ const BRANDS: MachineBrand[] = [
   "Nautilus",
   "Icarian",
   "Body Masters",
+  "Hammer Strength",
   "Cybex",
   "Precor",
   "Atlantis",
@@ -204,6 +205,7 @@ export default function MachineLineup() {
                 "Nautilus",
                 "Icarian",
                 "Body Masters",
+                "Hammer Strength",
                 "Cybex",
                 "Precor",
                 "Atlantis",
@@ -224,11 +226,13 @@ export default function MachineLineup() {
         Machine Lineup Updates
       </h3>
 
-      <div className="flex flex-col gap-4 mb-10 w-full items-center md:items-start md:px-6">
+      <div className="flex flex-col gap-6 mb-12 w-full items-start md:px-6">
         {/* Brand Filter */}
-        <div className="flex flex-wrap gap-2 justify-center md:flex-col md:items-start md:gap-3 md:w-full md:pb-2">
-          <span className="text-[#888] text-[0.85rem] mr-2 flex items-center">BRAND</span>
-          <div className="flex flex-wrap gap-[10px] items-center md:flex-nowrap md:overflow-x-auto md:w-full md:gap-2 md:pb-1 md:[-webkit-overflow-scrolling:touch] md:[&::-webkit-scrollbar]:hidden">
+        <div className="w-full">
+          <span className="text-gray-text text-[0.75rem] font-bold ml-6 mb-3 uppercase tracking-widest block md:ml-0">
+            BRAND
+          </span>
+          <div className="flex flex-nowrap overflow-x-auto w-full gap-3 px-6 pt-2 pb-4 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0">
             {BRANDS.map((brand) => {
               const logoPath = BRAND_LOGOS[brand];
               const isSelected = selectedBrand === brand;
@@ -236,28 +240,30 @@ export default function MachineLineup() {
               return (
                 <button
                   key={brand}
-                  className={`h-11 px-4 flex items-center justify-center min-w-[120px] bg-transparent border border-[#333] rounded-[20px] transition-all duration-200 whitespace-nowrap ${
-                    isSelected ? "bg-white text-black border-white font-bold" : "text-[#888]"
-                  } hover:border-[#666] hover:text-[#ccc]`}
+                  className={`h-14 px-6 flex items-center justify-center min-w-[140px] bg-transparent border rounded-full transition-all duration-300 whitespace-nowrap ${
+                    isSelected
+                      ? "bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                      : "text-gray-text border-gray-dark hover:border-gray-text"
+                  }`}
                   onClick={() => setSelectedBrand(brand)}
                   title={brand}
                 >
                   {logoPath ? (
-                    <div className="relative w-full h-full flex items-center justify-center">
+                    <div className="relative w-full h-full flex items-center justify-center py-2">
                       <Image
                         src={logoPath}
                         alt={brand}
-                        width={120}
-                        height={40}
-                        className={`object-contain w-[100px] h-auto transition-all duration-200 ${
+                        width={140}
+                        height={50}
+                        className={`object-contain max-h-8 w-auto transition-all duration-300 ${
                           isSelected
                             ? "filter-none"
-                            : "brightness-0 invert hover:brightness-0 hover:invert-[0.85]"
+                            : "brightness-0 invert opacity-40 hover:opacity-100"
                         }`}
                       />
                     </div>
                   ) : (
-                    <span className="font-semibold">{brand}</span>
+                    <span className="font-bold text-sm tracking-tighter">{brand}</span>
                   )}
                 </button>
               );
@@ -266,35 +272,39 @@ export default function MachineLineup() {
         </div>
 
         {/* Part Filter */}
-        <div className="flex flex-wrap gap-2 justify-center md:flex-row md:flex-nowrap md:overflow-x-auto md:w-full md:justify-start md:[-webkit-overflow-scrolling:touch] md:[&::-webkit-scrollbar]:hidden">
-          <span className="text-[#888] text-[0.85rem] mr-2 flex items-center">PART</span>
-          {PARTS.map((part) => (
-            <button
-              key={part.key}
-              className={`bg-transparent border border-[#333] px-[14px] py-[6px] text-[0.85rem] rounded-[20px] transition-all duration-200 whitespace-nowrap ${
-                selectedPart === part.key
-                  ? "bg-white text-black border-white font-bold"
-                  : "text-[#888]"
-              } hover:border-[#666] hover:text-[#ccc]`}
-              onClick={() => setSelectedPart(part.key)}
-            >
-              {part.label}
-            </button>
-          ))}
+        <div className="w-full">
+          <span className="text-gray-text text-[0.75rem] font-bold ml-6 mb-3 uppercase tracking-widest block md:ml-0">
+            PART
+          </span>
+          <div className="flex flex-nowrap overflow-x-auto w-full gap-2 px-6 pb-2 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0">
+            {PARTS.map((part) => (
+              <button
+                key={part.key}
+                className={`bg-transparent border px-5 py-2.5 text-sm rounded-full transition-all duration-300 whitespace-nowrap ${
+                  selectedPart === part.key
+                    ? "bg-white text-black border-white font-bold"
+                    : "text-gray-text border-gray-dark hover:border-gray-text"
+                }`}
+                onClick={() => setSelectedPart(part.key)}
+              >
+                {part.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6 w-full md:flex md:overflow-x-auto md:gap-4 md:px-6 md:pb-10 md:scroll-snap-type-x md:scroll-snap-type-mandatory md:[-webkit-overflow-scrolling:touch] md:[&::-webkit-scrollbar]:hidden">
+      <div className="flex overflow-x-auto gap-4 w-full px-6 pb-10 scroll-snap-type-x scroll-snap-type-mandatory [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] md:gap-6 md:px-0 md:pb-0 md:overflow-visible">
         {filteredMachines.map((machine) => {
           const logoPath = BRAND_LOGOS[machine.brand];
 
           return (
             <div
               key={machine.id}
-              className="bg-[#0c0c0c] border border-[#222] overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-[0_0_85%] md:scroll-snap-align-center"
+              className="flex-[0_0_85%] scroll-snap-align-center bg-[#0c0c0c] border border-gray-dark shadow-lg overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-1 md:scroll-snap-align-none"
             >
               {/* Image Placeholder */}
-              <div className="w-full h-[180px] bg-[#1a1a1a] flex items-center justify-center text-[#888] text-[0.8rem] border-b border-[#222]">
+              <div className="w-full h-[180px] bg-[#1a1a1a] flex items-center justify-center text-gray-text text-[0.8rem] border-b border-gray-dark">
                 {machine.brand} Image
               </div>
 
@@ -311,18 +321,18 @@ export default function MachineLineup() {
                       />
                     </div>
                   ) : (
-                    <span className="text-[0.85rem] font-bold text-[#cc0000] uppercase tracking-[0.05em]">
+                    <span className="text-[0.85rem] font-bold text-red-primary uppercase tracking-[0.05em]">
                       {machine.brand}
                     </span>
                   )}
 
                   {machine.status === "arrived" ? (
-                    <span className="inline-block px-2 py-1 text-[0.7rem] font-bold rounded bg-[rgba(204,0,0,0.15)] text-[#ff3333] border border-[rgba(204,0,0,0.3)] self-start uppercase">
+                    <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-red-primary/10 text-red-primary border border-red-primary/30 self-start uppercase tracking-wider">
                       입고 완료
                     </span>
                   ) : (
-                    <span className="inline-block px-2 py-1 text-[0.7rem] font-bold rounded bg-[rgba(255,255,255,0.1)] text-[#ccc] border border-[#444] self-start uppercase">
-                      입고 예정
+                    <span className="inline-block px-2.5 py-1 text-[0.65rem] font-black rounded bg-white/5 text-gray-text border border-gray-dark self-start uppercase tracking-wider">
+                      {machine.date || "입고 예정"}
                     </span>
                   )}
                 </div>
@@ -335,7 +345,7 @@ export default function MachineLineup() {
                     {PARTS.find((p) => p.key === machine.part)?.label}
                   </span>
                   {machine.date && (
-                    <span className="text-[0.8rem] text-[#888]">{machine.date}</span>
+                    <span className="text-[0.8rem] text-gray-text">{machine.date}</span>
                   )}
                 </div>
               </div>
