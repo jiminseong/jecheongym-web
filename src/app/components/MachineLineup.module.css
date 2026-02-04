@@ -1,0 +1,311 @@
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Filters */
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  width: 100%;
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.filterLabel {
+  color: var(--color-gray);
+  font-size: 0.85rem;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+/* Brand Filter Specifics */
+.brandButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.brandBtn {
+  height: 44px; /* Fixed height for logos */
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px; /* Increased to accommodate wider logos like Body Masters */
+}
+
+.brandLogoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandFilterImg {
+  filter: brightness(0) invert(1); /* White by default */
+  transition: all 0.2s;
+  object-fit: contain;
+  width: 100px; /* Fixed width for all logos */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.filterBtn:hover .brandFilterImg {
+  filter: brightness(0) invert(0.85); /* Slightly dimmed white on hover */
+}
+
+.filterBtn.active .brandFilterImg {
+  filter: none; /* Show original brand colors when active */
+}
+
+.brandText {
+  font-weight: 600;
+}
+
+.filterBtn:hover {
+  border-color: #666;
+  color: #ccc;
+}
+
+.filterBtn.active {
+  background: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+  font-weight: 700;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* Card */
+.card {
+  background-color: #0c0c0c;
+  border: 1px solid #222;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #444;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 180px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #222;
+}
+
+.cardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align top for multi-line or logo */
+  margin-bottom: 8px;
+  min-height: 32px; /* Ensure space for logo */
+}
+
+.cardBrandLogo {
+  display: flex;
+  align-items: center;
+}
+
+.brandLogoImg {
+  filter: brightness(0) invert(1); /* Default white logo on dark card */
+  object-fit: contain;
+  max-width: 100px;
+  max-height: 28px; /* Limit height properly */
+  width: auto;
+}
+
+.brand {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-red);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0; /* Remove bottom margin as it is now in flex container */
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.meta {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.part {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 4px;
+  align-self: flex-start;
+  text-transform: uppercase;
+}
+
+.badgeArrived {
+  background-color: rgba(204, 0, 0, 0.15);
+  color: var(--color-red-hover);
+  border: 1px solid rgba(204, 0, 0, 0.3);
+}
+
+.badgeScheduled {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 0;
+  }
+
+  .title {
+    padding: 0 24px;
+    margin-bottom: 24px;
+  }
+
+  .filterContainer {
+    align-items: flex-start;
+    padding: 0 24px;
+  }
+
+  .filterGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  /* Make brand buttons scrollable horizontally on mobile */
+  .brandButtons {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    gap: 8px;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .brandButtons::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Part buttons layout */
+  .filterGroup:nth-child(2) {
+    display: flex;
+    flex-direction: row; /* Keep parts in a row if possible, or scroll */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filterGroup::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Carousel Logic */
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 0 24px 40px 24px; /* Bottom padding for scroll feel */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    min-width: unset;
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}
