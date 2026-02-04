@@ -5,6 +5,10 @@ import { notFound } from "next/navigation";
 import { locales } from "@/i18n/config";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: {

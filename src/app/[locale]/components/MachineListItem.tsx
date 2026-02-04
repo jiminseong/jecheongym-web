@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 interface Machine {
   id: number;
@@ -22,7 +23,13 @@ export default function MachineListItem({ machine, logoPath, partLabel }: Machin
   const t = useTranslations();
 
   return (
-    <div className="flex-[0_0_85%] scroll-snap-align-center bg-[#0c0c0c] border border-gray-dark shadow-lg overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-1 md:scroll-snap-align-none">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex-[0_0_85%] scroll-snap-align-center bg-[#0c0c0c] border border-gray-dark shadow-lg overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-1 md:scroll-snap-align-none"
+    >
       {/* Image Placeholder */}
       <div className="w-full h-45  bg-[#1a1a1a] flex items-center justify-center text-gray-text text-[0.8rem] border-b border-gray-dark">
         {machine.brand} Image
@@ -65,6 +72,6 @@ export default function MachineListItem({ machine, logoPath, partLabel }: Machin
           <span className="text-[0.8rem] text-[#666]">{partLabel}</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
