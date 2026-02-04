@@ -222,7 +222,7 @@ export default function MachineLineup() {
       className="w-full max-w-[1200px] mx-auto mt-20 px-6 flex flex-col items-center md:px-0"
       id="machine-lineup"
     >
-      <h3 className="text-2xl text-white mb-8 text-center uppercase tracking-[0.1em] md:px-6 md:mb-6">
+      <h3 className="text-2xl text-white mb-8 text-center uppercase tracking-widest md:px-6 md:mb-6">
         Machine Lineup Updates
       </h3>
 
@@ -232,7 +232,7 @@ export default function MachineLineup() {
           <span className="text-gray-text text-[0.75rem] font-bold ml-6 mb-3 uppercase tracking-widest block md:ml-0">
             BRAND
           </span>
-          <div className="flex flex-nowrap overflow-x-auto w-full gap-3 px-6 pt-2 pb-4 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0">
+          <div className="flex flex-nowrap overflow-x-auto w-full gap-3 px-6 pt-2 pb-4 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0 md:flex-wrap md:overflow-visible md:pb-0">
             {BRANDS.map((brand) => {
               const logoPath = BRAND_LOGOS[brand];
               const isSelected = selectedBrand === brand;
@@ -276,7 +276,7 @@ export default function MachineLineup() {
           <span className="text-gray-text text-[0.75rem] font-bold ml-6 mb-3 uppercase tracking-widest block md:ml-0">
             PART
           </span>
-          <div className="flex flex-nowrap overflow-x-auto w-full gap-2 px-6 pb-2 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0">
+          <div className="flex flex-nowrap overflow-x-auto w-full gap-2 px-6 pb-2 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden md:px-0 md:flex-wrap md:overflow-visible">
             {PARTS.map((part) => (
               <button
                 key={part.key}
@@ -308,7 +308,8 @@ export default function MachineLineup() {
                 {machine.brand} Image
               </div>
 
-              <div className="p-5 flex flex-col flex-grow">
+              <div className="p-5 flex flex-col grow">
+                {" "}
                 <div className="flex justify-between items-start mb-2 min-h-[32px]">
                   {logoPath ? (
                     <div className="flex items-center">
@@ -339,14 +340,10 @@ export default function MachineLineup() {
                 <p className="text-[1.1rem] font-bold text-white leading-[1.3] mb-3">
                   {machine.name}
                 </p>
-
                 <div className="mt-auto flex flex-col gap-[6px]">
                   <span className="text-[0.8rem] text-[#666]">
                     {PARTS.find((p) => p.key === machine.part)?.label}
                   </span>
-                  {machine.date && (
-                    <span className="text-[0.8rem] text-gray-text">{machine.date}</span>
-                  )}
                 </div>
               </div>
             </div>
