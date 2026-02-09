@@ -102,10 +102,22 @@ export default function HeroSection() {
           <div className="bg-[#cc0000] text-white text-xs font-bold px-4 py-2 uppercase tracking-wider">
             {t("hero.newArrival.badge")}
           </div>
-          <div className="relative w-full h-[280px] bg-[#1a1a1a] flex items-center justify-center border-b border-[#222]">
-            <div className="w-16 h-16 rounded-full bg-[rgba(204,0,0,0.2)] border-2 border-[#cc0000] flex items-center justify-center text-[#cc0000] text-2xl cursor-pointer transition-all duration-300 hover:bg-[rgba(204,0,0,0.4)] hover:scale-110">
-              ▶
-            </div>
+          <div className="relative w-full bg-[#1a1a1a] border-b border-[#222]">
+            {/*
+              NOTE: 영상을 보려면 public/videos 폴더에 intro.mp4 파일을 넣어주세요.
+              To view the video, please add an intro.mp4 file to the public/videos folder.
+            */}
+            <video
+              className="w-full h-full object-cover aspect-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/images/video-placeholder.jpg" // Optional: 썸네일 이미지가 있다면 추가
+            >
+              <source src="/videos/intro.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div className="p-6">
             <h3 className="text-2xl font-bold mb-2 leading-tight">
