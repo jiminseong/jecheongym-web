@@ -16,9 +16,7 @@ type MachineBrand =
   | "Others"
   | "Hammer Strength"
   | "Cybex"
-  | "Atlantis"
   | "Arsenal Strength"
-  | "Precor"
   | "Life Fitness";
 
 const BRAND_LOGOS: Record<string, string> = {
@@ -28,9 +26,8 @@ const BRAND_LOGOS: Record<string, string> = {
   "Body Masters": "/logos/body-masters.png",
   "Hammer Strength": "/logos/hammer-strength.png",
   Cybex: "/logos/cybex.png",
-  Atlantis: "/logos/atlantis.png",
   "Arsenal Strength": "/logos/arsenal-strength.png",
-  Precor: "/logos/precor.png",
+  "Life Fitness": "/logos/life-fitness.png",
 };
 
 interface Machine {
@@ -415,8 +412,6 @@ const BRANDS: MachineBrand[] = [
   "Hammer Strength",
   "Cybex",
   "Life Fitness",
-  "Precor",
-  "Atlantis",
   "Arsenal Strength",
   "Others",
 ];
@@ -448,8 +443,6 @@ export default function MachineLineup() {
                 "Body Masters",
                 "Hammer Strength",
                 "Cybex",
-                "Precor",
-                "Atlantis",
                 "Arsenal Strength",
                 "Life Fitness",
               ].includes(machine.brand)
@@ -499,7 +492,7 @@ export default function MachineLineup() {
                         height={50}
                         className={`object-contain w-30 h-auto transition-all duration-300 ${
                           isSelected
-                            ? "filter-none"
+                            ? "brightness-0 opacity-100"
                             : "brightness-0 invert opacity-40 hover:opacity-100"
                         }`}
                       />
