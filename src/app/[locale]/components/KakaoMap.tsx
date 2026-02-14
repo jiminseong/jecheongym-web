@@ -11,7 +11,7 @@ declare global {
 const GYM_LOCATION = {
   lat: 37.1402155590581,
   lng: 128.211983410491,
-  name: "제천남여헬스장",
+  name: "제천남여헬스클럽",
   address: "충청북도 제천시 의림대로18길 3 행운빌딩 5층",
 };
 

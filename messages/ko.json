@@ -8,14 +8,14 @@
     "openNaverMap": "네이버 지도에서 보기"
   },
   "metadata": {
-    "title": "제천남여헬스장 | Serious Training Only",
+    "title": "제천남여헬스클럽 | Serious Training Only",
     "description": "제천 유일의 하이엔드 웨이트 전문 헬스장. 아스널 스트렝스, 해머 스트렝스 등 최고의 기구 라인업.",
-    "siteName": "제천남여헬스장",
-    "ogImageAlt": "제천남여헬스장 - Serious Training Only"
+    "siteName": "제천남여헬스클럽",
+    "ogImageAlt": "제천남여헬스클럽 - Serious Training Only"
   },
   "hero": {
     "slogan": "SERIOUS TRAINING ONLY.",
-    "subtitle": "제천남여헬스장은\n모두를 위한 헬스장이 아닙니다.\n",
+    "subtitle": "제천남여헬스클럽은\n모두를 위한 헬스장이 아닙니다.\n",
     "subtitle2": "오직 진지하게 훈련하는\n분들만을 위한 공간입니다.",
     "cta": {
       "inquiry": "입관 문의하기",
@@ -93,7 +93,7 @@
     }
   },
   "footer": {
-    "copyright": "제천남여헬스장. All rights reserved.",
+    "copyright": "제천남여헬스클럽. All rights reserved.",
     "createdBy": "Created by"
   },
   "machines": {
