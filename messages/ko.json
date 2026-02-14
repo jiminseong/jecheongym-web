@@ -79,7 +79,8 @@
       "status": {
         "arrived": "입고 완료",
         "scheduled": "입고 예정"
-      }
+      },
+      "description": "전시된 이미지는 제조사의 카탈로그 이미지로, 실제 센터의 기구와 버전, 색상 또는 연식에 따라 차이가 있을 수 있습니다."
     },
     "location": {
       "title": "LOCATION & INFO",

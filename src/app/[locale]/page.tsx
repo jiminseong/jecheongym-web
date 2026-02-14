@@ -7,6 +7,7 @@ import BrandMarquee from "./components/BrandMarquee";
 import KakaoMap from "./components/KakaoMap";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const KAKAO_ID = "muscle2020";
 const ADDRESS = "충청북도 제천시 의림대로18길 3 행운빌딩 5층";
@@ -129,10 +130,15 @@ export default function Home() {
             <div className="bg-[#cc0000] text-white text-xs font-bold px-4 py-2 uppercase tracking-wider">
               {t("hero.newArrival.badge")}
             </div>
-            <div className="relative w-full h-[280px] bg-[#1a1a1a] flex items-center justify-center border-b border-[#222]">
-              <div className="w-16 h-16 rounded-full bg-[rgba(204,0,0,0.2)] border-2 border-[#cc0000] flex items-center justify-center text-[#cc0000] text-2xl cursor-pointer transition-all duration-300 hover:bg-[rgba(204,0,0,0.4)] hover:scale-110">
-                ▶
-              </div>
+            <div className="relative w-full h-[280px] bg-[#1a1a1a] border-b border-[#222]">
+              <Image
+                src="/machines/122-nitro-plus-pullover.webp"
+                alt={t("hero.newArrival.title")}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 500px"
+                priority
+              />
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-2 leading-tight">

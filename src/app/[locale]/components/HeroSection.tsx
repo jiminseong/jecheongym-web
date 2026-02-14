@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function HeroSection() {
   const t = useTranslations();
@@ -102,22 +103,15 @@ export default function HeroSection() {
           <div className="bg-[#cc0000] text-white text-xs font-bold px-4 py-2 uppercase tracking-wider">
             {t("hero.newArrival.badge")}
           </div>
-          <div className="relative w-full bg-[#1a1a1a] border-b border-[#222]">
-            {/*
-              NOTE: 영상을 보려면 public/videos 폴더에 intro.mp4 파일을 넣어주세요.
-              To view the video, please add an intro.mp4 file to the public/videos folder.
-            */}
-            <video
-              className="w-full h-full object-cover aspect-video"
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="/images/video-placeholder.jpg" // Optional: 썸네일 이미지가 있다면 추가
-            >
-              <source src="/videos/intro.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div className="relative w-full bg-[#1a1a1a] border-b border-[#222] aspect-video">
+            <Image
+              src="/machines/122-nitro-plus-pullover.webp"
+              alt={t("hero.newArrival.title")}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 500px"
+              priority
+            />
           </div>
           <div className="p-6">
             <h3 className="text-2xl font-bold mb-2 leading-tight">

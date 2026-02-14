@@ -630,9 +630,12 @@ export default function MachineLineup() {
       className="w-full max-w-300 mx-auto mt-20 px-6 flex flex-col items-center md:px-0"
       id="machine-lineup"
     >
-      <h3 className="text-2xl text-white mb-8 text-center uppercase tracking-widest md:px-6 md:mb-6">
+      <h3 className="text-2xl text-white mb-2 text-center uppercase tracking-widest md:px-6">
         {t("sections.machineLineup.title")}
       </h3>
+      <p className="text-gray-text text-[0.85rem] mb-10 text-center max-w-[600px] px-6 opacity-70 leading-relaxed font-medium">
+        * {t("sections.machineLineup.description")}
+      </p>
 
       <div className="flex flex-col gap-6 mb-12 w-full items-start md:px-6">
         {/* Brand Filter */}

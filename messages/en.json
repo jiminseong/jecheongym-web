@@ -79,7 +79,8 @@
       "status": {
         "arrived": "Arrived",
         "scheduled": "Scheduled"
-      }
+      },
+      "description": "Images shown are catalog photos and may slightly differ from the actual equipment in version, color, or vintage."
     },
     "location": {
       "title": "LOCATION & INFO",
