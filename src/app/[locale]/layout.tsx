@@ -66,7 +66,7 @@ export async function generateMetadata({
     },
     verification: {
       other: {
-        "naver-site-verification": "1be4920780fade957dbc031346baad7274b23e04",
+        "naver-site-verification": "b76e443c3f75208d8ee88ac7ac1ce98b517b0fe0",
       },
     },
   };
