@@ -10,7 +10,11 @@ import {
   extractImageUrlsWithPlaywright,
   renderPdfPagesToImages,
 } from "./lib/extractors.mjs";
-import { RequestPolicyClient, isHostAllowed, normalizeAllowedDomains } from "./lib/policy-client.mjs";
+import {
+  RequestPolicyClient,
+  isHostAllowed,
+  normalizeAllowedDomains,
+} from "./lib/policy-client.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -106,7 +110,9 @@ function normalizeSourceList(source) {
 }
 
 function mergeAllowedDomains(plan, task, source, brand) {
-  const planDomains = Array.isArray(plan.official_domains?.[brand]) ? plan.official_domains[brand] : [];
+  const planDomains = Array.isArray(plan.official_domains?.[brand])
+    ? plan.official_domains[brand]
+    : [];
   const taskDomains = Array.isArray(task.allowed_asset_domains) ? task.allowed_asset_domains : [];
   const sourceDomains = Array.isArray(source.allowed_domains) ? source.allowed_domains : [];
 
@@ -164,7 +170,9 @@ async function downloadAndWriteImage({
     const isUnknownType = !contentType || contentType.includes("application/octet-stream");
     const looksLikeImageByExt = /\.(avif|jpe?g|png|webp)(\?.*)?$/i.test(imageUrl);
     if (!isUnknownType || !looksLikeImageByExt) {
-      throw new Error(`Expected image content-type but received "${contentType || "(none)"}" from ${imageUrl}`);
+      throw new Error(
+        `Expected image content-type but received "${contentType || "(none)"}" from ${imageUrl}`,
+      );
     }
   }
 
@@ -469,7 +477,11 @@ async function main() {
   const policy = {
     min_delay_ms: Number.parseInt(plan.policy?.request_delay_ms?.min, 10) || 1500,
     max_delay_ms: Number.parseInt(plan.policy?.request_delay_ms?.max, 10) || 3000,
-    max_images_per_machine: clamp(Number.parseInt(plan.policy?.max_images_per_machine, 10) || 1, 1, 2),
+    max_images_per_machine: clamp(
+      Number.parseInt(plan.policy?.max_images_per_machine, 10) || 1,
+      1,
+      2,
+    ),
     max_images_per_brand: Math.max(1, Number.parseInt(plan.policy?.max_images_per_brand, 10) || 30),
     max_width_px: Math.max(400, Number.parseInt(plan.policy?.max_width_px, 10) || 1600),
     webp_quality: clamp(Number.parseInt(plan.policy?.webp_quality, 10) || 80, 75, 85),
