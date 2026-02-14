@@ -58,6 +58,44 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ExerciseGym",
+            name: t("metadata.siteName"),
+            description: t("metadata.description"),
+            url: "https://jecheongym.site",
+            telephone: "0507-1405-1134",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "의림대로18길 3 행운빌딩 5층",
+              addressLocality: "제천시",
+              addressRegion: "충청북도",
+              postalCode: "27109",
+              addressCountry: "KR",
+            },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "09:00",
+                closes: "23:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Saturday", "Sunday"],
+                opens: "10:00",
+                closes: "18:00",
+              },
+            ],
+            priceRange: "$$",
+            image: ["https://jecheongym.site/og-image.png"],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
         <div className="max-w-300 w-full flex flex-col md:flex-row items-center justify-between gap-12">
