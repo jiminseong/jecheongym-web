@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://jecheongym.com/sitemap.xml",
+    sitemap: "https://jecheongym.site/sitemap.xml",
   };
 }

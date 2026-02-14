@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://jecheongym-web.vercel.app";
+  const baseUrl = "https://jecheongym.site";
 
   return locales.flatMap((locale) => [
     {

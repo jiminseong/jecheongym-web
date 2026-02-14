@@ -31,13 +31,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
-    metadataBase: new URL("https://jecheongym-web.vercel.app"),
+    metadataBase: new URL("https://jecheongym.site"),
     title: t("title"),
     description: t("description"),
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "https://jecheongym-web.vercel.app",
+      url: "https://jecheongym.site",
       siteName: t("siteName"),
       locale: locale === "ko" ? "ko_KR" : "en_US",
       type: "website",
@@ -57,11 +57,11 @@ export async function generateMetadata({
       images: ["/og-image.png"],
     },
     alternates: {
-      canonical: `https://jecheongym-web.vercel.app/${locale}`,
+      canonical: `https://jecheongym.site/${locale}`,
       languages: {
-        ko: "https://jecheongym-web.vercel.app/ko",
-        en: "https://jecheongym-web.vercel.app/en",
-        "x-default": "https://jecheongym-web.vercel.app/ko",
+        ko: "https://jecheongym.site/ko",
+        en: "https://jecheongym.site/en",
+        "x-default": "https://jecheongym.site/ko",
       },
     },
   };

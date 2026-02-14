@@ -1,5 +1,6 @@
 # PRD.md
 # 제천 웨이트 전문 헬스장 랜딩 페이지
+# 공식 도메인: https://jecheongym.site
 
 ---
 
