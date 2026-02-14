@@ -37,11 +37,20 @@ interface Machine {
   part: MachinePart;
   status: MachineStatus;
   date: string;
+  image?: string;
 }
 
 const MACHINES: Machine[] = [
   // Panatta
-  { id: 101, name: "Super High Row", brand: "Panatta", part: "Back", status: "arrived", date: "" },
+  {
+    id: 101,
+    name: "Super High Row",
+    brand: "Panatta",
+    part: "Back",
+    status: "arrived",
+    date: "",
+    image: "/machines/101-super-high-row.webp",
+  },
   {
     id: 102,
     name: "Super Rowing Machine Circular",
@@ -49,6 +58,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/102-super-rowing-circular.webp",
   },
   { id: 103, name: "Super Low Row", brand: "Panatta", part: "Back", status: "arrived", date: "" },
   { id: 104, name: "Super Rowing", brand: "Panatta", part: "Back", status: "arrived", date: "" },
@@ -70,12 +80,60 @@ const MACHINES: Machine[] = [
   },
 
   // Cybex
-  { id: 107, name: "Smith Machine", brand: "Cybex", part: "Etc", status: "arrived", date: "" },
-  { id: 108, name: "Squat Machine", brand: "Cybex", part: "Legs", status: "arrived", date: "" },
-  { id: 109, name: "Hack Squat Old", brand: "Cybex", part: "Legs", status: "arrived", date: "" },
-  { id: 110, name: "Leg Press Old", brand: "Cybex", part: "Legs", status: "arrived", date: "" },
-  { id: 111, name: "Cable Tower Old", brand: "Cybex", part: "Etc", status: "arrived", date: "" },
-  { id: 112, name: "Seated Row Old", brand: "Cybex", part: "Back", status: "arrived", date: "" },
+  {
+    id: 107,
+    name: "Smith Machine",
+    brand: "Cybex",
+    part: "Etc",
+    status: "arrived",
+    date: "",
+    image: "/machines/107-smith-machine.webp",
+  },
+  {
+    id: 108,
+    name: "Squat Machine",
+    brand: "Cybex",
+    part: "Legs",
+    status: "arrived",
+    date: "",
+    image: "/machines/108-squat-machine.webp",
+  },
+  {
+    id: 109,
+    name: "Hack Squat Old",
+    brand: "Cybex",
+    part: "Legs",
+    status: "arrived",
+    date: "",
+    image: "/machines/109-hack-squat-old.webp",
+  },
+  {
+    id: 110,
+    name: "Leg Press Old",
+    brand: "Cybex",
+    part: "Legs",
+    status: "arrived",
+    date: "",
+    image: "/machines/110-leg-press-old.webp",
+  },
+  {
+    id: 111,
+    name: "Cable Tower Old",
+    brand: "Cybex",
+    part: "Etc",
+    status: "arrived",
+    date: "",
+    image: "/machines/111-cable-tower-old.webp",
+  },
+  {
+    id: 112,
+    name: "Seated Row Old",
+    brand: "Cybex",
+    part: "Back",
+    status: "arrived",
+    date: "",
+    image: "/machines/112-seated-row-old.webp",
+  },
   {
     id: 113,
     name: "Lateral Raise Old",
@@ -83,6 +141,7 @@ const MACHINES: Machine[] = [
     part: "Shoulder",
     status: "arrived",
     date: "",
+    image: "/machines/113-lateral-raise-old.webp",
   },
   {
     id: 114,
@@ -91,6 +150,7 @@ const MACHINES: Machine[] = [
     part: "Legs",
     status: "arrived",
     date: "",
+    image: "/machines/114-seated-leg-press.webp",
   },
   {
     id: 115,
@@ -99,6 +159,7 @@ const MACHINES: Machine[] = [
     part: "Etc",
     status: "arrived",
     date: "",
+    image: "/machines/115-arm-curl-old.webp",
   },
   {
     id: 116,
@@ -107,10 +168,19 @@ const MACHINES: Machine[] = [
     part: "Shoulder",
     status: "arrived",
     date: "",
+    image: "/machines/116-shoulder-press.webp",
   },
 
   // Nautilus
-  { id: 117, name: "Seated Dip", brand: "Nautilus", part: "Chest", status: "arrived", date: "" },
+  {
+    id: 117,
+    name: "Seated Dip",
+    brand: "Nautilus",
+    part: "Chest",
+    status: "arrived",
+    date: "",
+    image: "/machines/117-seated-dip.webp",
+  },
   {
     id: 118,
     name: "Nitro Plus Lat Pulldown",
@@ -118,6 +188,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/118-nitro-plus-lat-pulldown.webp",
   },
   {
     id: 119,
@@ -126,6 +197,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/119-nitro-plus-incline-press.webp",
   },
   {
     id: 120,
@@ -134,8 +206,17 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/120-nitro-plus-vertical-press.webp",
   },
-  { id: 121, name: "Multi Biceps", brand: "Nautilus", part: "Etc", status: "arrived", date: "" },
+  {
+    id: 121,
+    name: "Multi Biceps",
+    brand: "Nautilus",
+    part: "Etc",
+    status: "arrived",
+    date: "",
+    image: "/machines/121-multi-biceps.webp",
+  },
   {
     id: 122,
     name: "Nitro Plus Pullover",
@@ -143,6 +224,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/122-nitro-plus-pullover.webp",
   },
 
   // Hammer Strength
@@ -153,6 +235,7 @@ const MACHINES: Machine[] = [
     part: "Shoulder",
     status: "arrived",
     date: "",
+    image: "/machines/123-iso-lateral-shoulder-press.webp",
   },
   {
     id: 124,
@@ -161,6 +244,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/124-iso-lateral-bench-press.webp",
   },
   {
     id: 125,
@@ -169,6 +253,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/125-iso-lateral-decline-press.webp",
   },
   {
     id: 126,
@@ -177,6 +262,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/126-iso-lateral-incline-press.webp",
   },
   {
     id: 127,
@@ -185,6 +271,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/127-iso-incline-press.webp",
   },
   {
     id: 128,
@@ -193,6 +280,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/128-iso-low-row.webp",
   },
   {
     id: 129,
@@ -201,6 +289,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/129-iso-lateral-row.webp",
   },
   {
     id: 130,
@@ -209,6 +298,7 @@ const MACHINES: Machine[] = [
     part: "Etc",
     status: "arrived",
     date: "",
+    image: "/machines/130-seated-biceps-curl.webp",
   },
   {
     id: 131,
@@ -217,6 +307,7 @@ const MACHINES: Machine[] = [
     part: "Etc",
     status: "arrived",
     date: "",
+    image: "/machines/131-seated-triceps-extension.webp",
   },
   {
     id: 132,
@@ -225,6 +316,7 @@ const MACHINES: Machine[] = [
     part: "Legs",
     status: "arrived",
     date: "",
+    image: "/machines/132-hip-abduction.webp",
   },
   {
     id: 133,
@@ -233,6 +325,7 @@ const MACHINES: Machine[] = [
     part: "Legs",
     status: "arrived",
     date: "",
+    image: "/machines/133-leg-extension.webp",
   },
   {
     id: 134,
@@ -241,6 +334,7 @@ const MACHINES: Machine[] = [
     part: "Legs",
     status: "arrived",
     date: "",
+    image: "/machines/134-leg-curl.webp",
   },
   {
     id: 135,
@@ -249,6 +343,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/135-iso-lateral-wide-pulldown.webp",
   },
   {
     id: 136,
@@ -257,6 +352,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/136-iso-lateral-front-pulldown.webp",
   },
   {
     id: 137,
@@ -265,6 +361,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/137-iso-lateral-dy-row.webp",
   },
   {
     id: 138,
@@ -273,6 +370,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/138-mts-high-row.webp",
   },
   {
     id: 139,
@@ -281,6 +379,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/139-mts-incline-press.webp",
   },
   {
     id: 140,
@@ -289,6 +388,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/140-mts-decline-press.webp",
   },
   {
     id: 141,
@@ -297,6 +397,7 @@ const MACHINES: Machine[] = [
     part: "Shoulder",
     status: "arrived",
     date: "",
+    image: "/machines/141-mts-shoulder-press.webp",
   },
   {
     id: 142,
@@ -305,6 +406,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/142-fixed-pulldown.webp",
   },
 
   // Life Fitness
@@ -315,6 +417,7 @@ const MACHINES: Machine[] = [
     part: "Legs",
     status: "arrived",
     date: "",
+    image: "/machines/143-seated-leg-curl.webp",
   },
 
   // Arsenal Strength
@@ -325,10 +428,19 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/144-low-row.webp",
   },
 
   // Icarian
-  { id: 145, name: "V Squat", brand: "Icarian", part: "Legs", status: "arrived", date: "" },
+  {
+    id: 145,
+    name: "V Squat",
+    brand: "Icarian",
+    part: "Legs",
+    status: "arrived",
+    date: "",
+    image: "/machines/145-v-squat.webp",
+  },
   {
     id: 146,
     name: "Lat Pulldown 304",
@@ -336,9 +448,26 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/146-lat-pulldown-304.webp",
   },
-  { id: 147, name: "Long Pull", brand: "Icarian", part: "Back", status: "arrived", date: "" },
-  { id: 148, name: "Pec Deck Fly", brand: "Icarian", part: "Chest", status: "arrived", date: "" },
+  {
+    id: 147,
+    name: "Long Pull",
+    brand: "Icarian",
+    part: "Back",
+    status: "arrived",
+    date: "",
+    image: "/machines/147-long-pull.webp",
+  },
+  {
+    id: 148,
+    name: "Pec Deck Fly",
+    brand: "Icarian",
+    part: "Chest",
+    status: "arrived",
+    date: "",
+    image: "/machines/148-pec-deck-fly.webp",
+  },
 
   // Body Masters
   {
@@ -367,6 +496,7 @@ const MACHINES: Machine[] = [
     part: "Shoulder",
     status: "arrived",
     date: "",
+    image: "/machines/152-gymleco-lateral.webp",
   },
   {
     id: 153,
@@ -375,8 +505,17 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/153-newtech-low-pulley.webp",
   },
-  { id: 154, name: "Power Rack x1", brand: "Others", part: "Etc", status: "arrived", date: "" },
+  {
+    id: 154,
+    name: "Power Rack x1",
+    brand: "Others",
+    part: "Etc",
+    status: "arrived",
+    date: "",
+    image: "/machines/154-power-rack.webp",
+  },
   {
     id: 155,
     name: "Bench Press Rack",
@@ -384,6 +523,7 @@ const MACHINES: Machine[] = [
     part: "Chest",
     status: "arrived",
     date: "",
+    image: "/machines/155-bench-press-rack.webp",
   },
   {
     id: 156,
@@ -392,6 +532,7 @@ const MACHINES: Machine[] = [
     part: "Etc",
     status: "arrived",
     date: "",
+    image: "/machines/156-dumbbells-set-1.webp",
   },
   {
     id: 157,
@@ -400,6 +541,7 @@ const MACHINES: Machine[] = [
     part: "Etc",
     status: "arrived",
     date: "",
+    image: "/machines/157-dumbbells-set-2.webp",
   },
 ];
 
@@ -432,21 +574,24 @@ export default function MachineLineup() {
 
   const filteredMachines = useMemo(() => {
     return MACHINES.filter((machine) => {
-      const brandMatch =
-        selectedBrand === "All"
-          ? true
-          : selectedBrand === "Others"
-            ? ![
-                "Panatta",
-                "Nautilus",
-                "Icarian",
-                "Body Masters",
-                "Hammer Strength",
-                "Cybex",
-                "Arsenal Strength",
-                "Life Fitness",
-              ].includes(machine.brand)
-            : machine.brand === selectedBrand;
+      let brandMatch = false;
+      if (selectedBrand === "All") {
+        brandMatch = true;
+      } else if (selectedBrand === "Others") {
+        brandMatch = ![
+          "Panatta",
+          "Nautilus",
+          "Icarian",
+          "Body Masters",
+          "Hammer Strength",
+          "Cybex",
+          "Arsenal Strength",
+          "Life Fitness",
+        ].includes(machine.brand as MachineBrand); // Use explicit type assertion if needed or just string check
+      } else {
+        brandMatch = machine.brand === selectedBrand;
+      }
+
       const partMatch = selectedPart === "All" ? true : machine.part === selectedPart;
       return brandMatch && partMatch;
     });
