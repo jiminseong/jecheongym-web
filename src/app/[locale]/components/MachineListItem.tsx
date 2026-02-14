@@ -32,7 +32,7 @@ export default function MachineListItem({ machine, logoPath, partLabel }: Machin
       className="flex-[0_0_85%] scroll-snap-align-center bg-[#0c0c0c] border border-gray-dark shadow-lg overflow-hidden flex flex-col transition-all duration-200 relative hover:-translate-y-1 hover:border-[#444] md:flex-1 md:scroll-snap-align-none"
     >
       {/* Image Area */}
-      <div className="w-full h-[280px] md:h-[350px] bg-[#1a1a1a] flex items-center justify-center text-gray-text text-[0.8rem] border-b border-gray-dark relative overflow-hidden group">
+      <div className="w-full h-[280px] md:h-[370px] bg-[#1a1a1a] flex items-center justify-center text-gray-text text-[0.8rem] border-b border-gray-dark relative overflow-hidden group">
         {machine.image ? (
           <Image
             src={machine.image}
