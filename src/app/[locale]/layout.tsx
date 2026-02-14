@@ -64,6 +64,11 @@ export async function generateMetadata({
         "x-default": "https://jecheongym.site/ko",
       },
     },
+    verification: {
+      other: {
+        "naver-site-verification": "1be4920780fade957dbc031346baad7274b23e04",
+      },
+    },
   };
 }
 
