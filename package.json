@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "assets:plan": "node scripts/machine-assets/generate-source-plan.mjs",
+    "assets:plan:populate": "node scripts/machine-assets/populate-source-plan.mjs",
+    "assets:collect": "node scripts/machine-assets/collect-machine-images.mjs --plan scripts/machine-assets/source-plan.json",
+    "assets:collect:dry": "node scripts/machine-assets/collect-machine-images.mjs --plan scripts/machine-assets/source-plan.json --dry-run",
+    "assets:takedown": "node scripts/machine-assets/remove-machine-image.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.31.0",
@@ -17,13 +22,19 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
+    "@napi-rs/canvas": "^0.1.81",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.24",
+    "cheerio": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "pdfjs-dist": "^5.4.296",
+    "playwright": "^1.52.0",
     "postcss": "^8.5.6",
+    "robots-parser": "^3.0.1",
+    "sharp": "^0.34.2",
     "tailwindcss": "^4.1.18",
     "typescript": "^5"
   }

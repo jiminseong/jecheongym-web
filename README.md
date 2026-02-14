@@ -34,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Machine Image Collection
+
+Official manufacturer assets collection scripts are in `scripts/machine-assets/`.
+
+```bash
+npm run assets:plan
+npm run assets:collect:dry
+npm run assets:collect
+npm run assets:takedown -- --id 123
+```
+
+Detailed policy and usage: `scripts/machine-assets/README.md`
