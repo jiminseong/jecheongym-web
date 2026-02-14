@@ -60,8 +60,24 @@ const MACHINES: Machine[] = [
     date: "",
     image: "/machines/102-super-rowing-circular.webp",
   },
-  { id: 103, name: "Super Low Row", brand: "Panatta", part: "Back", status: "arrived", date: "" },
-  { id: 104, name: "Super Rowing", brand: "Panatta", part: "Back", status: "arrived", date: "" },
+  {
+    id: 103,
+    name: "Super Low Row",
+    brand: "Panatta",
+    part: "Back",
+    status: "arrived",
+    date: "",
+    image: "/machines/103-panata-super-low-row.webp",
+  },
+  {
+    id: 104,
+    name: "Super Rowing",
+    brand: "Panatta",
+    part: "Back",
+    status: "arrived",
+    date: "",
+    image: "/machines/104-panata-super-rowing.webp",
+  },
   {
     id: 105,
     name: "Super Lat Machine Convert",
@@ -69,6 +85,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/105-panata-super-lat-machine-convergent.webp",
   },
   {
     id: 106,
@@ -77,6 +94,7 @@ const MACHINES: Machine[] = [
     part: "Legs",
     status: "arrived",
     date: "",
+    image: "/machines/106-panata-super-leg-press-45-degree-dual-system.webp",
   },
 
   // Cybex
@@ -477,8 +495,17 @@ const MACHINES: Machine[] = [
     part: "Shoulder",
     status: "arrived",
     date: "",
+    image: "/machines/149-bodymasters-pec.webp",
   },
-  { id: 150, name: "T-Bar Row", brand: "Body Masters", part: "Back", status: "arrived", date: "" },
+  {
+    id: 150,
+    name: "T-Bar Row",
+    brand: "Body Masters",
+    part: "Back",
+    status: "arrived",
+    date: "",
+    image: "/machines/150-bodymasters-t-bar-row.webp",
+  },
   {
     id: 151,
     name: "Pull Down Machine",
@@ -486,6 +513,7 @@ const MACHINES: Machine[] = [
     part: "Back",
     status: "arrived",
     date: "",
+    image: "/machines/151-bodymasters-pull-down.webp",
   },
 
   // Others

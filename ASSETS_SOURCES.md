@@ -35,10 +35,10 @@
 |---|---|---|---|---|---|---|
 | 101 | Panatta | Super High Row | `101-super-high-row.webp` | https://www.panattasport.com/wp-content/uploads/2023/03/1fw003-2-jpg-webp.webp | 2026-02-14 | ✅ Collected |
 | 102 | Panatta | Super Rowing Machine Circular | `102-super-rowing-circular.webp` | https://www.panattasport.com/wp-content/uploads/2022/08/pic_1FW204_01-jpg.webp | 2026-02-14 | ✅ Collected |
-| 103 | Panatta | Super Low Row | `103-super-low-row.webp` | | | ❌ Required |
-| 104 | Panatta | Super Rowing | `104-super-rowing.webp` | | | ❌ Required |
-| 105 | Panatta | Super Lat Machine Convert | `105-super-lat-convert.webp` | | | ❌ Required |
-| 106 | Panatta | Incline Split 45 Degree Leg Press | `106-incline-split-leg-press.webp` | | | ❌ Required |
+| 103 | Panatta | Super Low Row | `103-panata-super-low-row.webp` | | 2026-02-15 | ✅ Collected |
+| 104 | Panatta | Super Rowing | `104-panata-super-rowing.webp` | | 2026-02-15 | ✅ Collected |
+| 105 | Panatta | Super Lat Machine Convert | `105-panata-super-lat-machine-convergent.webp` | | 2026-02-15 | ✅ Collected |
+| 106 | Panatta | Incline Split 45 Degree Leg Press | `106-panata-super-leg-press-45-degree-dual-system.webp` | | 2026-02-15 | ✅ Collected |
 
 ### Cybex
 | ID | Brand | Model | File Name | Source URL | Acquired At | Status |
@@ -109,9 +109,9 @@
 ### Body Masters
 | ID | Brand | Model | File Name | Source URL | Acquired At | Status |
 |---|---|---|---|---|---|---|
-| 149 | Body Masters | Vertical Pec Control | `149-md504-vertical-pec.webp` | | | ❌ Required |
-| 150 | Body Masters | T-Bar Row | `150-t-bar-row.webp` | | | ❌ Required |
-| 151 | Body Masters | Pull Down Machine | `151-pull-down-machine.webp` | | | ❌ Required |
+| 149 | Body Masters | Vertical Pec Control | `149-bodymasters-pec.webp` | | 2026-02-15 | ✅ Collected |
+| 150 | Body Masters | T-Bar Row | `150-bodymasters-t-bar-row.webp` | | 2026-02-15 | ✅ Collected |
+| 151 | Body Masters | Pull Down Machine | `151-bodymasters-pull-down.webp` | | 2026-02-15 | ✅ Collected |
 
 ### Others
 | ID | Brand | Model | File Name | Source URL | Acquired At | Status |
